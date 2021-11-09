@@ -1,0 +1,379 @@
+Activity	Data Type
+Number of beatings from Wife	Discrete
+Results of rolling a dice	Discrete
+Weight of a person	Continuous
+Weight of Gold	Continuous
+Distance between two places	Continuous
+Length of a leaf	Continuous
+Dog's weight	Continuous
+Blue Color	Discrete
+Number of kids	Discrete
+Number of tickets in Indian railways	Discrete
+Number of times married	Discrete
+Gender (Male or Female)	Discrete
+Q1) Identify the Data type for the Following:
+
+Q2) Identify the Data types, which were among the following
+Nominal, Ordinal, Interval, Ratio.
+Data	Data Type
+Gender	Nominal
+High School Class Ranking	Ordinal
+Celsius Temperature	Interval 
+Weight	Interval
+Hair Color	Nominal
+Socioeconomic Status	Ordinal
+Fahrenheit Temperature	Interval
+Height	Interval
+Type of living accommodation	Nominal
+Level of Agreement	Ordinal
+IQ(Intelligence Scale)	Interval
+Sales Figures	Ratio
+Blood Group	Nominal
+Time Of Day	Interval
+Time on a Clock with Hands	Interval
+Number of Children	Interval
+Religious Preference	Nominal
+Barometer Pressure	Interval
+SAT Scores	Interval
+Years of Education	Ratio
+
+
+Q3) Three Coins are tossed, find the probability that two heads and one tail are obtained?
+Ans:
+Heads = H, Tails = T
+Possible outcomes: (H,H,H), (T,T,T), (H,H,T),(T,T,H),(H,T,T),(T,H,H),(T,H,T),(H,T,H)
+Probability for two heads and one tail is: 3
+i.e., (H,H,T),(T,H,H),(H,T,H)
+Total outcome=Number of outcomes/Total no of outcomes
+	              = 3/8
+
+Q4)  Two Dice are rolled, find the probability that sum is
+a)	Equal to 1
+b)	Less than or equal to 4
+c)	Sum is divisible by 2 and  3
+Answer: a) Equal to 1 =0
+              b) Less than or equal to 4 = 1/6
+              c ) Sum is divisible by 2 and 3 = 1/6 
+
+###Q5)  A bag contains 2 red, 3 green and 2 blue balls. Two balls are drawn at random. What is the probability that none of the balls drawn is blue?###
+
+
+
+
+Q6) Calculate the Expected number of candies for a randomly selected child 
+Below are the probabilities of count of candies for children (ignoring the nature of the child-Generalized view)
+CHILD	Candies count	Probability
+A	1	0.015
+B	4	0.20
+C	3	0.65
+D	5	0.005
+E	6	0.01
+F	2	0.120
+Child A – probability of having 1 candy = 0.015.
+Child B – probability of having 4 candies = 0.20
+Solution:
+Expected value = ∑x.p(x)
+		     = 1*0.015+4*0.20+3*0.65+5*0.005+6*0.01+2*0.120
+                          = 3.09
+                           
+
+
+
+
+
+
+
+
+
+
+
+Q7) Calculate Mean, Median, Mode, Variance, Standard Deviation, Range &     comment about the values / draw inferences, for the given dataset
+-	For Points,Score,Weigh>
+Find Mean, Median, Mode, Variance, Standard Deviation, and Range and also Comment about the values/ Draw some inferences.
+Answer:
+#mean, median, mode, Variance, standard deviation for "points"
+#mean
+mean(Q7$Points)
+output: 3.596563
+#median
+median(Q7$Points)
+output: 3.695
+#installing package
+#mode
+library(modeest)
+mode(Q7$Points)
+mfv(Q7$Points) #most frequently occurring value
+output: 3.07   3.92
+#variance
+var(Q7$Points)
+output: 0.2858814
+#standard deviation
+sd(Q7$Points)
+output: 0.5346787
+#range
+range(Q7$Points)
+output: 2.76 4.93
+rangevalue<-function(x){max(x)-min(x)}
+rangevalue(Q7$Points)
+output:  2.17
+#mean, median, mode, Variance, standard deviation for "score"
+#mean
+mean(Q7$Score)
+output: 3.21725
+#median
+median(Q7$Score)
+output: 3.325
+#mode
+mode(Q7$Score)
+mfv(Q7$Score)
+output: 3.44
+#variance
+var(Q7$Score)
+output: 0.957379
+#standard deviation
+sd(Q7$Score)
+output: 0.9784574
+#range
+range(Q7$Score)
+output: 1.513 5.424
+rangevalue<-function(x){max(x)-min(x)}
+rangevalue(Q7$Score)
+output: 3.911
+#mean, median, mode, Variance, standard deviation for "weigh"
+#mean
+mean(Q7$Weigh)
+output: 17.84875
+#median
+median(Q7$Weigh)
+output: 17.71
+#mode
+mode(Q7$Weigh)
+mfv(Q7$Weigh)
+output: 17.02 18.90
+#variance
+var(Q7$Weigh)
+output: 3.193166
+#standard deviation
+sd(Q7$Weigh)
+output: 1.786943
+#range
+range(Q7$Weigh)
+output: 14.5 22.9
+rangevalue<-function(x){max(x)-min(x)}
+rangevalue(Q7$Weigh)
+output: 8.4
+Use Q7.csv file 
+
+
+
+Q8) Calculate Expected Value for the problem below
+a)	The weights (X) of patients at a clinic (in pounds), are
+108, 110, 123, 134, 135, 145, 167, 187, 199
+Assume one of the patients is chosen at random. What is the Expected Value of the Weight of that patient?
+Sol:  Expected value   : ∑p(x)E(x)
+         Probability of selecting each patient =1/9
+         Expected value : 108, 110,123,134,135,145,167,187,199
+         Probability of x : 1/9, 1/9,1/9,1/9,1/9,1/9,1/6,1/9,1/9
+         Expected value = 1/9(108+110+123+134+135+145+167+187+199)
+			   = 1/9(1308)
+                                     = 145.33
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q9) Calculate Skewness, Kurtosis & draw inferences on the following data
+      Cars speed and distance 
+Use Q9_a.csv
+Answer:
+data.speed.skew()
+-0.11750986144663393
+data.dist.skew()
+0.8068949601674215
+data.speed.kurt()
+-0.5089944204057617
+data.dist.kurt()
+0.4050525816795765
+
+SP and Weight(WT)
+Use Q9_b.csv
+data1.SP.skew()
+1.6114501961773586
+data1.WT.skew()
+-0.6147533255357768
+data1.SP.kurt()
+2.9773289437871835
+data1.WT.kurt()
+0.9502914910300326
+
+
+
+
+
+
+Q10) Draw inferences about the following boxplot & histogram
+
+ 
+ This histogram have right skewed data.   
+
+ 
+In this boxplot contain outliers which are above the upper extreme
+
+
+Q11)  Suppose we want to estimate the average weight of an adult male in    Mexico. We draw a random sample of 2,000 men from a population of 3,000,000 men and weigh them. We find that the average person in our sample weighs 200 pounds, and the standard deviation of the sample is 30 pounds. Calculate 94%,98%,96% confidence interval?
+Solution:
+import numpy as np
+import pandas as pd
+from scipy import stats
+from scipy.stats import norm
+# Avg. weight of Adult in Mexico with 94% CI
+stats.norm.interval(0.94,200,30/(2000**0.5))
+(198.738325292158, 201.261674707842)
+# Avg. weight of Adult in Mexico with 98% CI
+stats.norm.interval(0.98,200,30/(2000**0.5))
+(198.43943840429978, 201.56056159570022)
+# Avg. weight of Adult in Mexico with 96% CI
+stats.norm.interval(0.96,200,30/(2000**0.5))
+(198.62230334813333, 201.37769665186667)
+
+
+
+
+
+
+
+
+
+Q12)  Below are the scores obtained by a student in tests 
+34,36,36,38,38,39,39,40,40,41,41,41,41,42,42,45,49,56
+1)	Find mean, median, variance, standard deviation.
+2)	What can we say about the student marks? 
+Answer: Mean = 41
+Median = 40.5
+Variance = 25.52   
+Standard deviation= 5.05664
+In this we plot histogram for this, it follows a right skewed
+
+Q13) What is the nature of skewness when mean, median of data are equal?
+Answer) Data is normalized when there is no skewness
+Q14) What is the nature of skewness when mean > median ?
+Answer) nature of skewness is negative and data is present on right side
+Q15) What is the nature of skewness when median > mean?
+Answer) nature of skewness is positive and data is present on left side
+Q16) What does positive kurtosis value indicates for a data ?
+Answer) thinner peak and wider tails
+Q17) What does negative kurtosis value indicates for a data?
+Answer) wider peak and thinner tails
+Q18) Answer the below questions using the below boxplot visualization.
+ 
+What can we say about the distribution of the data?
+Answer) it is not normally distributed
+What is nature of skewness of the data?
+Answer) negative skewnes
+What will be the IQR of the data (approximately)? 
+Answer) 10-18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q19) Comment on the below Boxplot visualizations? 
+ 
+Draw an Inference from the distribution of data for Boxplot 1 with respect Boxplot 2.
+Answer) Distribution of data in 1 is less when compared to 2 . and having less variance in 1 when compared to 2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q 20) Calculate probability from the given dataset for the below cases
+
+Data _set: Cars.csv
+Calculate the probability of MPG of Cars for the below cases.
+       MPG <- Cars$MPG
+a.	P(MPG>38)
+b.	P(MPG<40)
+c.	P (20<MPG<50)
+d.	P(MPG>38)-
+Answer)
+1-pnorm(38,34.422,9.13144)= 0.3475908
+
+e.	P(MPG<40)-
+pnorm(40,34.422,9.13144)= 0.7293527
+
+c. P (20<MPG<50)-
+pnorm(50,34.422,9.13144)-(1-pnorm(20,34.422,9.13144))=
+
+0.01311818
+
+
+
+
+
+
+
+
+
+
+
+
+
+Q 21) Check whether the data follows normal distribution
+a)	Check whether the MPG of Cars follows Normal Distribution 
+        Dataset: Cars.csv
+Answer) distributed normally
+b)	Check Whether the Adipose Tissue (AT) and Waist Circumference(Waist)  from wc-at data set  follows Normal Distribution 
+       Dataset: wc-at.csv
+Answer) AT is normally distributed 
+                 WC is normally distributed
+
+Q 22) Calculate the Z scores of  90% confidence interval,94% confidence interval, 60% confidence interval 
+Answer)  90% = 1.644854
+                  94% = 1.880794
+                  60%=  0.8416212
+Q 23) Calculate the t scores of 95% confidence interval, 96% confidence interval, 99% confidence interval for sample size of 25
+Answer) 95% = 2.063899
+                96% = 2.171545   
+                 99% = 2.79694
+  Q 24)   A Government  company claims that an average light bulb lasts 270 days. A researcher randomly selects 18 bulbs for testing. The sampled bulbs last an average of 260 days, with a standard deviation of 90 days. If the CEO's claim were true, what is the probability that 18 randomly selected bulbs would have an average life of no more than 260 days
+Hint:  
+   rcode   pt(tscore,df)  
+ df  degrees of freedom
+Solution=52.86%
+
+
+         
