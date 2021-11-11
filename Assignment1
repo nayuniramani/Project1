@@ -1,41 +1,43 @@
-Activity	Data Type
-Number of beatings from Wife	Discrete
-Results of rolling a dice	Discrete
-Weight of a person	Continuous
-Weight of Gold	Continuous
-Distance between two places	Continuous
-Length of a leaf	Continuous
-Dog's weight	Continuous
-Blue Color	Discrete
-Number of kids	Discrete
-Number of tickets in Indian railways	Discrete
-Number of times married	Discrete
-Gender (Male or Female)	Discrete
 Q1) Identify the Data type for the Following:
+Activity	                	Data Type
+Number of beatings from Wife		Discrete
+Results of rolling a dice		Discrete
+Weight of a person	        	Continuous
+Weight of Gold	                	Continuous
+Distance between two places		Continuous
+Length of a leaf	        	Continuous
+Dog's weight	                	Continuous
+Blue Color	                	Discrete
+Number of kids	                	Discrete
+Number of tickets in Indian railways	Discrete
+Number of times married			Discrete
+Gender (Male or Female)			Discrete
+
 
 Q2) Identify the Data types, which were among the following
 Nominal, Ordinal, Interval, Ratio.
-Data	Data Type
-Gender	Nominal
+Sol: 
+Data				Data Type
+Gender	      			 Nominal
 High School Class Ranking	Ordinal
-Celsius Temperature	Interval 
-Weight	Interval
-Hair Color	Nominal
-Socioeconomic Status	Ordinal
-Fahrenheit Temperature	Interval
-Height	Interval
+Celsius Temperature		Interval 
+Weight				Interval
+Hair Color			Nominal
+Socioeconomic Status		Ordinal
+Fahrenheit Temperature		Interval
+Height				Interval
 Type of living accommodation	Nominal
-Level of Agreement	Ordinal
-IQ(Intelligence Scale)	Interval
-Sales Figures	Ratio
-Blood Group	Nominal
-Time Of Day	Interval
+Level of Agreement		Ordinal
+IQ(Intelligence Scale)		Interval
+Sales Figures			Ratio
+Blood Group			Nominal
+Time Of Day			Interval
 Time on a Clock with Hands	Interval
-Number of Children	Interval
-Religious Preference	Nominal
-Barometer Pressure	Interval
-SAT Scores	Interval
-Years of Education	Ratio
+Number of Children		Interval
+Religious Preference		Nominal
+Barometer Pressure		Interval
+SAT Scores			Interval
+Years of Education		Ratio
 
 
 Q3) Three Coins are tossed, find the probability that two heads and one tail are obtained?
@@ -55,11 +57,6 @@ Answer: a) Equal to 1 =0
               b) Less than or equal to 4 = 1/6
               c ) Sum is divisible by 2 and 3 = 1/6 
 
-###Q5)  A bag contains 2 red, 3 green and 2 blue balls. Two balls are drawn at random. What is the probability that none of the balls drawn is blue?###
-
-
-
-
 Q6) Calculate the Expected number of candies for a randomly selected child 
 Below are the probabilities of count of candies for children (ignoring the nature of the child-Generalized view)
 CHILD	Candies count	Probability
@@ -76,17 +73,6 @@ Expected value = ∑x.p(x)
 		     = 1*0.015+4*0.20+3*0.65+5*0.005+6*0.01+2*0.120
                           = 3.09
                            
-
-
-
-
-
-
-
-
-
-
-
 Q7) Calculate Mean, Median, Mode, Variance, Standard Deviation, Range &     comment about the values / draw inferences, for the given dataset
 -	For Points,Score,Weigh>
 Find Mean, Median, Mode, Variance, Standard Deviation, and Range and also Comment about the values/ Draw some inferences.
@@ -164,8 +150,6 @@ rangevalue(Q7$Weigh)
 output: 8.4
 Use Q7.csv file 
 
-
-
 Q8) Calculate Expected Value for the problem below
 a)	The weights (X) of patients at a clinic (in pounds), are
 108, 110, 123, 134, 135, 145, 167, 187, 199
@@ -176,19 +160,7 @@ Sol:  Expected value   : ∑p(x)E(x)
          Probability of x : 1/9, 1/9,1/9,1/9,1/9,1/9,1/6,1/9,1/9
          Expected value = 1/9(108+110+123+134+135+145+167+187+199)
 			   = 1/9(1308)
-                                     = 145.33
-
-
-
-
-
-
-
-
-
-
-
-
+                            = 145.33
 
 Q9) Calculate Skewness, Kurtosis & draw inferences on the following data
       Cars speed and distance 
@@ -215,10 +187,6 @@ data1.WT.kurt()
 0.9502914910300326
 
 
-
-
-
-
 Q10) Draw inferences about the following boxplot & histogram
 
  
@@ -243,14 +211,6 @@ stats.norm.interval(0.98,200,30/(2000**0.5))
 # Avg. weight of Adult in Mexico with 96% CI
 stats.norm.interval(0.96,200,30/(2000**0.5))
 (198.62230334813333, 201.37769665186667)
-
-
-
-
-
-
-
-
 
 Q12)  Below are the scores obtained by a student in tests 
 34,36,36,38,38,39,39,40,40,41,41,41,41,42,42,45,49,56
@@ -281,44 +241,10 @@ Answer) negative skewnes
 What will be the IQR of the data (approximately)? 
 Answer) 10-18
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Q19) Comment on the below Boxplot visualizations? 
  
 Draw an Inference from the distribution of data for Boxplot 1 with respect Boxplot 2.
 Answer) Distribution of data in 1 is less when compared to 2 . and having less variance in 1 when compared to 2.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Q 20) Calculate probability from the given dataset for the below cases
 
@@ -339,18 +265,6 @@ c. P (20<MPG<50)-
 pnorm(50,34.422,9.13144)-(1-pnorm(20,34.422,9.13144))=
 
 0.01311818
-
-
-
-
-
-
-
-
-
-
-
-
 
 Q 21) Check whether the data follows normal distribution
 a)	Check whether the MPG of Cars follows Normal Distribution 
