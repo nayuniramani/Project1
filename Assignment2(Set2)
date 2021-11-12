@@ -1,0 +1,96 @@
+1.	The time required for servicing transmissions is normally distributed with µ= = 45 minutes and  = 8 minutes. The service manager plans to have work begin on the transmission of a customer’s car 10 minutes after the car is dropped off and the customer is told that the car will be ready within 1 hour from drop-off. What is the probability that the service manager cannot meet his commitment? 
+
+A.	0.3875   
+B.	0.2676   
+C.	0.5   
+D.	0.6987 
+Answer: given µ=45,  = 8 
+He starting the work 10min after the car is dropped and then µ become 55
+Then normal distribution z=( x- µ)/
+from scipy import stats
+stats.norm.cdf(60,55,8) # for meeting the commitment
+1-stats.norm.cdf(60,55,8) # for not meeting
+0.26598552904870054
+So, answer is B
+
+
+2.	The current age (in years) of 400 clerical employees at an insurance claims processing center is normally distributed with mean  = 38 and Standard deviation  =6. For each statement below, please specify True/False. If false, briefly explain why.
+A.	More employees at the processing center are older than 44 than between 38 and 44.
+Answer: from scipy import stats
+                 1-stats.norm.cdf(44, 38,6)
+       0.15865525393145707
+       stats.norm.cdf(44,38,6)- stats.norm.cdf(38,38,6)
+       0.3413447460685429
+              statement A is False as Probability of employees aged between 38 to 44 is more.
+
+B.	A training program for employees under the age of 30 at the center would be expected to attract about 36 employees.
+Answer:
+# No. of employees attending training program from 400 nos. is N*P(X<30)
+400*stats.norm.cdf(30,38,6)
+36.484487890347154
+
+
+3.	If X1 ~ N(μ, σ2) and X2 ~ N(μ, σ2) are iid normal random variables, then what is the difference between 2 X1 and X1 + X2? Discuss both their distributions and parameters.       
+Answer:  
+X ∼ N(µ1, σ1^2 ), and  Y ∼ N(µ2, σ2^2 ) are two independent  random variables 
+then   X + Y ∼ N(µ1 + µ2, σ1^2 + σ2^2 ) , and      X − Y ∼ N(µ1 − µ2, σ1^2 + σ2^2 )
+2X1~ N(2 u,4 σ^2) and X1+X2 ~  N(µ + µ, σ^2 + σ^2 ) ~ N(2 u, 2σ^2 )
+2X1-(X1+X2) = N ( 4µ,6 σ^2)
+
+
+4.	Let X ~ N (100, 202). Find two values, a and b, symmetric about the mean, such that the probability of the random variable taking a value between them is 0.99. 
+
+A.	90.5, 105.9 
+B.	80.2, 119.8 
+C.	22, 78 
+D.	48.5, 151.5 
+E.	90.1, 109.9
+
+Ans. Since we need to find out the values of a and b, which are symmetric about the mean, such that the probability of random variable taking a value between them is 0.99, we have to work out in reverse order. 
+The Probability of getting value between a and b should be 0.99.
+So the Probability of going wrong, or the Probability outside the a and b area is 0.01 (ie. 1-0.99).
+The Probability towards left from a = -0.005 (ie. 0.01/2). 
+The Probability towards right from b = +0.005 (ie. 0.01/2).
+So since we have the probabilities of a and b, we need to calculate X, the random variable at a and b which has got these probabilities. 
+By finding the Standard Normal Variable Z (Z Value), we can calculate the X values.
+Z=(X- μ) / σ 
+For Probability 0.005 the Z Value is -2.57 (from Z Table).
+Z * σ + μ = X
+Z(-0.005)*20+100 = -(-2.57)*20+100 = 151.4
+Z(+0.005)*20+100 = (-2.57)*20+100 = 48.6
+So, option D is correct.
+
+5.	Consider a company that has two different divisions. The annual profits from the two divisions are independent and have distributions Profit1 ~ N(5, 32) and Profit2 ~ N(7, 42) respectively. Both the profits are in $ Million. Answer the following questions about the total profit of the company in Rupees. Assume that $1 = Rs. 45
+A.	Specify a Rupee range (centered on the mean) such that it contains 95% probability for the annual profit of the company.
+B.	Specify the 5th percentile of profit (in Rupees) for the company
+C.	Which of the two divisions has a larger probability of making a loss in a given year?
+
+Answer: 
+import numpy as np
+from scipy import stats
+from scipy.stats import norm
+# Mean profits from two different divisions of a company = Mean1 + Mean2
+Mean = 5+7
+print('Mean Profit is Rs', Mean*45,'Million')
+Mean Profit is Rs 540 Million
+# Variance of profits from two different divisions of a company = SD^2 = SD1^2 + SD2^2
+SD = np.sqrt((9)+(16))
+print('Standard Deviation is Rs', SD*45, 'Million')
+Standard Deviation is Rs 225.0 Million
+# A. Specify a Rupee range (centered on the mean) such that it contains 95% probability for the annual profit of the company.
+print('Range is Rs',(stats.norm.interval(0.95,540,225)),'in Millions')
+Range is Rs (99.00810347848784, 980.9918965215122) in Millions
+# B. Specify the 5th percentile of profit (in Rupees) for the company
+# To compute 5th Percentile, we use the formula X=μ + Zσ; wherein from z table, 5 percentile = -1.645
+X= 540+(-1.645)*(225)
+print('5th percentile of profit (in Million Rupees) is',np.round(X,))
+5th percentile of profit (in Million Rupees) is 170.0
+# C. Which of the two divisions has a larger probability of making a loss in a given year?
+# Probability of Division 1 making a loss P(X<0)
+stats.norm.cdf(0,5,3)
+0.0477903522728147
+# Probability of Division 2 making a loss P(X<0)
+stats.norm.cdf(0,7,4)
+0.040059156863817086
+
+
