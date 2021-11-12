@@ -1,0 +1,58 @@
+2. Answer the following three questions based on the box-plot above.
+(i)	What is inter-quartile range of this dataset? (please approximate the numbers) In one line, explain what this value implies.
+Answer: Inner quartile range is the difference between third quartile and first quartile
+IQR: Q3-Q1
+Q1=5
+Q3=12(approximately)
+IQR= Q3-Q1
+       = 12-5
+       =7
+Q1 represents lower quartile 
+Q3 represents upper quartile
+And this contain one outlier which is on 25. 
+ii)	What can we say about the skewness of this dataset?
+Answer:  In the boxplot, the vertical line in the boxplot represents the median is much closer to the first quartile than the third quartile, which means distribution is right skewed 
+
+iii)	If it was found that the data point with the value 25 is actually 2.5, how would the new box-plot be affected?
+Answer: the point in the 25 is an outlier
+
+3.
+Answer the following three questions based on the histogram above.
+(i)	Where would the mode of this dataset lie?
+Answer:  Near 4 to 8 represent the mode of the dataset
+(ii)	Comment on the skewness of the dataset.
+Answer: In histogram the data is distributed near left side and long tail in the right side and this distribution is called as right skewed	
+(iii)	Suppose that the above histogram and the box-plot in question 2 are plotted for the same dataset. Explain how these graphs complement each other in providing information about any dataset. 
+Answer: Both boxplot and histogram have the right skewed. Boxplot is used for identifying the outliers. And histogram is used to find the probability distribution.
+
+4.	AT&T was running commercials in 1990 aimed at luring back customers who had switched to one of the other long-distance phone service providers. One such commercial shows a businessman trying to reach Phoenix and mistakenly getting Fiji, where a half-naked native on a beach responds incomprehensibly in Polynesian. When asked about this advertisement, AT&T admitted that the portrayed incident did not actually take place but added that this was an enactment of something that “could happen.” Suppose that one in 200 long-distance telephone calls is misdirected. What is the probability that at least one in five attempted telephone calls reaches the wrong number? (Assume independence of attempts.)
+Answer: 
+E be the event
+E: the call is misdirected
+The probability of an event is P(E) = 1/200
+The probability of not occurring an event P(E)=1-P[E]
+                                              =1-1/200=199/200
+Probability that at least one in five attempted call reaches the wrong number is 
+                                                           = 1-(199/200*199/200*199/200*199/200*199/200)
+                                                           =0.025
+                                                           
+5.	Returns on a certain business venture, to the nearest $1,000, are known to follow the following probability distribution
+x	P(x)
+-2,000	0.1
+-1,000	0.1
+0	0.2
+1000	0.2
+2000	0.3
+3000	0.1
+
+(i)	What is the most likely monetary outcome of the business venture?
+Answer:  the most likely monetary outcome of the business venture x=2000, with the highest probability of 0.3
+(ii)	Is the venture likely to be successful? Explain
+Answer: it is successful because p(x=1000 )+p(x=2000)+p(x=3000) = 0.2+0.3+0.1 = 0.6, more than 50% 
+(iii)	What is the long-term average earning of business ventures of this kind? Explain
+Answer:  the long-term average earning of business ventures of this kind are “Expected value” are average of probability distribution.
+(-2000)(0.1)+(-1000)(0.1)+0(0.2)+(1000)(0.2)+(2000)(0.3)+(3000)(0.1) = 800
+iv)          What is the good measure of the risk involved in a venture of this kind? Compute this measure
+Answer: good measure of risk involved in a venture of this kind is calculated using variance. Because it squares the positive and negative deviations
+
+
